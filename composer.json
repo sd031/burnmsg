@@ -6,7 +6,10 @@
 	"require": {
 		"laravel/framework": "4.0.*"
 	},
-	"autoload": {
+    "require-dev": {
+        "way/generators": "dev-master"
+    },
+    "autoload": {
 		"classmap": [
 			"app/commands",
 			"app/controllers",
