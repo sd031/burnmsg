@@ -1,5 +1,7 @@
 @extends('layouts.default')
 
 @section('content')
-{{ $body }}
+<pre>
+{{{ $body }}}
+</pre>
 @stop
