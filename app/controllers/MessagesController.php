@@ -16,9 +16,17 @@ class MessagesController extends BaseController {
 	 * Store a newly created resource in storage.
 	 *
 	 * @return Response
-	 */
+     */
 	public function store()
-	{
+    {
+        // Validate input
+        $v = Message::validate(Input::all());
+
+        if ($v !== true) {
+            return Redirect::route('messages.create')
+                ->withErrors($v->errors());
+        }
+
         $msg = new Message;
 
         // Generate a key
