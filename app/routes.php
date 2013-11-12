@@ -12,5 +12,5 @@
 */
 
 Route::get('/', ['as' => 'messages.create', 'uses' => 'MessagesController@create']);
-Route::get('/{key}/{value}', ['as' => 'messages.show', 'uses' => 'MessagesController@show']);
 Route::post('/', ['as' => 'messages.store', 'uses' => 'MessagesController@store']);
+Route::get('/{key}/{value}', ['as' => 'messages.show', 'uses' => 'MessagesController@show']);
