@@ -6050,3 +6050,6 @@ body {
   /* bring body to bottom of navbar */
 
 }
+article {
+  white-space: pre-wrap;
+}

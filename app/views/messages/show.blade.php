@@ -1,7 +1,7 @@
 @extends('layouts.default')
 
 @section('content')
-<pre>
+<article>
 {{{ $body }}}
-</pre>
+</article>
 @stop
