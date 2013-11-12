@@ -32,9 +32,9 @@ class MessagesController extends BaseController {
         $body = mcrypt_encrypt(MCRYPT_BLOWFISH, $key, Input::get('body'), MCRYPT_MODE_CFB, $iv);
 
         // Save the message to the database
-        $msg->body = base64_encode($body);
+        $msg->body = $body;
         $msg->url = Message::get_unique_url();
-        $msg->iv = base64_encode($iv);
+        $msg->iv = $iv;
         $msg->save();
 
         // Return the view
@@ -53,14 +53,14 @@ class MessagesController extends BaseController {
         $msg = Message::where('url', '=', $url)->first();
 
         if ($msg->destroyed) {
-            $body = $msg->body;
+            $body = "This message has been destroyed";
         } else {
             // Decrypt it
-            $iv = base64_decode($msg->iv);
-            $body = mcrypt_decrypt(MCRYPT_BLOWFISH, $key, base64_decode($msg->body), MCRYPT_MODE_CFB, $iv);
+            $iv = $msg->iv;
+            $body = mcrypt_decrypt(MCRYPT_BLOWFISH, $key, $msg->body, MCRYPT_MODE_CFB, $iv);
 
             // Destroy the message
-            $msg->body = "This message has been destroyed";
+            $msg->body = null;
             $msg->destroyed = true;
             $msg->save();
         }

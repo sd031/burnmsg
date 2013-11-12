@@ -14,9 +14,9 @@ class CreateMessagesTable extends Migration {
 	{
 		Schema::create('messages', function(Blueprint $table) {
 			$table->increments('id');
-			$table->text('body');
+			$table->binary('body');
 			$table->string('url');
-			$table->boolean('destroyed');
+			$table->boolean('destroyed')->default(false);
 			$table->timestamps();
 		});
 	}

@@ -13,7 +13,7 @@ class AddIvFieldToMessagesTable extends Migration {
 	public function up()
 	{
 		Schema::table('messages', function(Blueprint $table) {
-			$table->string('iv');
+			$table->binary('iv');
 		});
 	}
 
