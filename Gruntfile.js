@@ -19,7 +19,7 @@ module.exports = function(grunt) {
             development: {
                 options: {
                     compress: true, //minify
-                },                
+                },
                 files: {
                 //compile main stylesheet
                 './public/css/styles.css' : './app/assets/less/styles.less'
@@ -37,7 +37,13 @@ module.exports = function(grunt) {
             }
         },
         phpunit: {
-
+            classes: {
+                dir: './app/tests/'
+            },
+            options: {
+                bin: 'phpunit',
+                colors: true
+            }
         },
         watch: {
 
