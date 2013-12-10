@@ -2,8 +2,7 @@
 module.exports = function(grunt) {
 
     //Initializing the configuration object
-    grunt.initConfig({
-        
+    grunt.initConfig({ 
         concat: {
             options: {
                 separator: ';'
@@ -16,7 +15,6 @@ module.exports = function(grunt) {
                 dest: './public/js/app.js'
             }
         },
-
         less: {
             development: {
                 options: {
@@ -24,23 +22,26 @@ module.exports = function(grunt) {
                 },                
                 files: {
                 //compile main stylesheet
-                "./public/css/styles.css":"./app/assets/less/styles.less"
+                './public/css/styles.css' : './app/assets/less/styles.less'
                 }
             }
         },
-
         uglify: {
-
+            options: {
+                mangle: false
+            },
+            dist: {
+                files: {
+                    './public/js/app.js' : './public/js/app.js'
+                }
+            }
         },
-        
         phpunit: {
 
         },
-
         watch: {
 
         }
-
     });
 
     //Load plugins
