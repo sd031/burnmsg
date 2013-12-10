@@ -5,16 +5,23 @@ module.exports = function(grunt) {
     grunt.initConfig({
         
         concat: {
-
+            options: {
+                separator: ';'
+            },            
+            javascript: {
+                src: [
+                    './bower_components/jquery/jquery.min.js',
+                    './bower_components/bootstrap/bootstrap.min.js'
+                ],
+                dest: './public/js/app.js'
+            }
         },
 
         less: {
             development: {
-                
                 options: {
                     compress: true, //minify
-                },
-                
+                },                
                 files: {
                 //compile main stylesheet
                 "./public/css/styles.css":"./app/assets/less/styles.less"
