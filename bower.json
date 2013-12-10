@@ -1,0 +1,6 @@
+{
+  "name": "burnmsg",
+  "dependencies": {
+    "bootstrap": "~3.0.3"
+  }
+}
