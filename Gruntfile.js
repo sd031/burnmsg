@@ -9,7 +9,17 @@ module.exports = function(grunt) {
         },
 
         less: {
-
+            development: {
+                
+                options: {
+                    compress: true, //minify
+                },
+                
+                files: {
+                //compile main stylesheet
+                "./public/css/styles.css":"./app/assets/less/styles.less"
+                }
+            }
         },
 
         uglify: {
@@ -25,4 +35,11 @@ module.exports = function(grunt) {
         }
 
     });
-}
+
+    //Load plugins
+    grunt.loadNpmTasks('grunt-contrib-concat');
+    grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-less');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-phpunit');
+};
