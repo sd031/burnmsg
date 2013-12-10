@@ -9,6 +9,7 @@ module.exports = function(grunt) {
             },            
             javascript: {
                 src: [
+                    './app/assets/js/app.js',
                     './bower_components/jquery/jquery.min.js',
                     './bower_components/bootstrap/bootstrap.min.js'
                 ],
@@ -46,7 +47,24 @@ module.exports = function(grunt) {
             }
         },
         watch: {
-
+            js: {
+                files: ['./app/assets/js/*.*'],
+                tasks: ['concat:javascript', 'uglify'],
+                options: {
+                    livereload: true
+                }
+            },
+            less: {
+                files: ['./app/assets/less/*.*'],
+                tasks: ['less'],
+                options: {
+                    livereload: true
+                }
+            },
+            tests: {
+                files: ['./app/controllers/*.php', './app/models/*.php'],
+                tasks: ['phpunit']
+            }
         }
     });
 
@@ -56,4 +74,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-phpunit');
+
+    //Define the deault task
+    grunt.registerTask('default', ['watch']);
 };
