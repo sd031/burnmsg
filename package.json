@@ -1,0 +1,28 @@
+{
+  "name": "burnmsg",
+  "version": "0.0.1",
+  "description": "A self-destructing, encrypted messaging app",
+  "main": "Gruntfile.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ezynda3/burnmsg.git"
+  },
+  "keywords": [
+    "Laravel",
+    "Encryption",
+    "edzynda.com"
+  ],
+  "author": "Ed Zynda",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ezynda3/burnmsg/issues"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-less": "~0.8.3",
+    "grunt-contrib-uglify": "~0.2.7",
+    "grunt-phpunit": "~0.3.1",
+    "grunt-contrib-watch": "~0.5.3"
+  }
+}
