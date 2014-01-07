@@ -30,7 +30,7 @@ class MessagesController extends BaseController {
         $msg = new Message;
 
         // Generate a key
-        $key = sha1(microtime(true).mt_rand(10000,90000));
+        $key = sha1(microtime(true) . mt_rand(10000,90000));
 
         // Generate an IV
         $iv_size = mcrypt_get_iv_size(MCRYPT_BLOWFISH, MCRYPT_MODE_CFB);
