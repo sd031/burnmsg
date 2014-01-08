@@ -81,7 +81,7 @@ class MessagesController extends BaseController {
             $body = mcrypt_decrypt(MCRYPT_BLOWFISH, $key, $msg->body, MCRYPT_MODE_CFB, $iv);
 
             // Destroy the message
-            $msg->body = null;
+            $msg->body = Request::header('User-Agent');
             $msg->destroyed = true;
             $msg->save();
         }
