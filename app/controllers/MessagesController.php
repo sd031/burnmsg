@@ -58,8 +58,12 @@ class MessagesController extends BaseController {
     public function show($url, $key)
     {
         $fbua = [
-            'facebookexternalhit/1.0 (+http://www.facebook.com/externalhit_uatext.php)',
-            'facebookexternalhit/1.1 (+http://www.facebook.com/externalhit_uatext.php)'
+            "facebookexternalhit/1.1 (+http://www.facebook.com/externalhit_uatext.php)",
+            "facebookexternalhit/1.1 (+https://www.facebook.com/externalhit_uatext.php)",
+            "facebookexternalhit/1.0 (+http://www.facebook.com/externalhit_uatext.php)",
+            "facebookexternalhit/1.0 (+https://www.facebook.com/externalhit_uatext.php)",
+            "facebookexternalhit/1.2 (+http://www.facebook.com/externalhit_uatext.php)",
+            "facebookexternalhit/1.2 (+https://www.facebook.com/externalhit_uatext.php)"
         ];
 
         if (in_array(Request::header('User-Agent'), $fbua)){
