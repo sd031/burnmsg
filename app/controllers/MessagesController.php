@@ -57,6 +57,15 @@ class MessagesController extends BaseController {
 	 */
     public function show($url, $key)
     {
+        $fbua = [
+            'facebookexternalhit/1.0 (+http://www.facebook.com/externalhit_uatext.php)',
+            'facebookexternalhit/1.1 (+http://www.facebook.com/externalhit_uatext.php)'
+        ];
+
+        if (in_array(Request::header('User-Agent'), $fbua)){
+            return View::make('messages.show', ['body' => '']);
+        }
+
         // Fetch our message
         $msg = Message::where('url', '=', $url)->first();
 
