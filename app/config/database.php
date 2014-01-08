@@ -55,9 +55,9 @@ return array(
 		'mysql' => array(
 			'driver'    => 'mysql',
 			'host'      => 'localhost',
-			'database'  => defined('BMSG_DB_DB') ? BMSG_DB_DB : '',
-			'username'  => defined('BMSG_DB_USER') ? BMSG_DB_USER : '',
-			'password'  => defined('BMSG_DB_PASS') ? BMSG_DB_PASS : '',
+			'database'  => '',
+			'username'  => '',
+			'password'  => '',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',
