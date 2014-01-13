@@ -1,6 +1,6 @@
 <?php
 
-$url = getenv('DATABASE_URL') ?: "schema://user:pass@host/path";
+$url = getenv('DATABASE_URL') ?: "schema://user:pass@host/path:1234";
 $db_params = parse_url($url);
 $db_params['db'] = trim($db_params['path'], '/');
 
