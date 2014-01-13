@@ -77,4 +77,5 @@ module.exports = function(grunt) {
 
     //Define the deault task
     grunt.registerTask('default', ['watch']);
+    grunt.registerTask('build', ['concat', 'uglify', 'less']);
 };
