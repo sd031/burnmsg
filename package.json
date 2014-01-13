@@ -17,6 +17,16 @@
   "bugs": {
     "url": "https://github.com/ezynda3/burnmsg/issues"
   },
+  "dependencies": {
+    "bower": "~1.2.8",
+    "grunt-cli": "~0.1.11",
+    "grunt": "~0.4.2",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-less": "~0.8.3",
+    "grunt-contrib-uglify": "~0.2.7",
+    "grunt-phpunit": "~0.3.1",
+    "grunt-contrib-watch": "~0.5.3"
+  },
   "devDependencies": {
     "grunt": "~0.4.2",
     "grunt-contrib-concat": "~0.3.0",
