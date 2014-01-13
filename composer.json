@@ -34,5 +34,12 @@
 	"config": {
 		"preferred-install": "dist"
 	},
-	"minimum-stability": "dev"
+	"minimum-stability": "dev",
+    "extra": {
+        "heroku": {
+            "framework": "silex",
+            "document-root": "public",
+            "index-document": "index.php"
+        }
+    }
 }
