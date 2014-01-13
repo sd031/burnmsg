@@ -26,9 +26,9 @@ $app->redirectIfTrailingSlash();
 |
 */
 
-$env = $app->detectEnvironment(function ()
+$env = $app->detectEnvironment(function()
 {
-    dd(getenv('APP_ENV') ?: 'local');
+    return getenv('APP_ENV') ?: 'local';
 });
 
 /*
