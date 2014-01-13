@@ -1,9 +1,5 @@
 <?php
 
-$url = getenv('DATABASE_URL');
-$db_params = parse_url($url);
-$db_params['db'] = trim($db_params['path'], '/');
-
 return array(
 
 	/*
@@ -58,11 +54,10 @@ return array(
 
 		'mysql' => array(
 			'driver'    => 'mysql',
-			'host'      => $db_params['host'],
-			'database'  => $db_params['db'],
-			'username'  => $db_params['user'],
-            'password'  => $db_params['pass'],
-            'port'      => $db_params['port'],
+			'host'      => 'localhost',
+			'database'  => 'burnmsg',
+			'username'  => 'burnmsg',
+			'password'  => 'password',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',
