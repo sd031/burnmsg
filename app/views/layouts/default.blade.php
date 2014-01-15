@@ -31,7 +31,7 @@
 		<!-- Wrapper-->
 			<div id="wrapper">
                 <header>
-                    <h2>Burnmsg</h2>
+                    <h2><a href="{{ URL::to('/') }}" class="logo"><i class="fa fa-fire"></i> Burnmsg</a></h2>
                 </header>
 
 				<!-- Nav -->
@@ -54,7 +54,7 @@
                             <article id="github" class="panel">
                                 <header>
 									<h1>Fork Me on Github</h1>
-                                    <a href="https://www.github.com/ezynda3/burnmsg.git" target="_blank">
+                                    <a href="https://www.github.com/ezynda3/burnmsg.git" class="byline" target="_blank">
                                         http://www.github.com/ezynda3/burnmsg.git
                                     </a>
                                 </header>
@@ -64,9 +64,9 @@
                             <article id="twitter" class="panel">
                                 <header>
 									<h1>Follow Me on Twitter</h1>
-                                    <a href="https://www.twitter.com/edzynda" target="_blank">
+                                    <a href="https://www.twitter.com/edzynda" class="byline" target="_blank">
                                         http://www.twitter.com/edzynda
-                                    </a>
+                                </a>
                                 </header>
                             </article>
 
@@ -77,8 +77,8 @@
 					<div id="footer">
 						<ul class="links">
 							<li>&copy; Burnmsg</li>
-							<li>Code : <a href="http://edzynda.com/">Ed Zynda</a></li>
-							<li>Design : <a href="http://html5up.net/">HTML5 UP</a></li>
+							<li>Code : <a href="http://edzynda.com/" target="_blank">Ed Zynda</a></li>
+							<li>Design : <a href="http://html5up.net/" target="_blank">HTML5 UP</a></li>
 						</ul>
 					</div>
 
