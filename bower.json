@@ -2,6 +2,7 @@
   "name": "burnmsg",
   "dependencies": {
     "bootstrap": "~3.0.3",
-    "html5shiv": "~3.7.0"
+    "html5shiv": "~3.7.0",
+    "font-awesome": "~4.0.3"
   }
 }

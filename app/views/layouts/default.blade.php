@@ -1,42 +1,80 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Burnmsg - A self-destructing, encryted message app</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400" rel="stylesheet" />
+        <script>
+            @if (Request::segment(1))
+                var prefix = '../assets/css/style';
+            @else
+                var prefix = 'assets/css/style';
+            @endif
+        </script>
+        <script src="{{ asset('assets/js/app.js') }}"></script>
+        <noscript>
+            <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}" />
+        </noscript>
+        <!--[if lte IE 8]><script src="js/html5shiv.js"></script><link rel="stylesheet" href="css/ie8.css" /><![endif]-->
+	</head>
+    <body class="homepage">
+		<!-- Wrapper-->
+			<div id="wrapper">
+                <header>
+                    <h2>Burnmsg</h2>
+                </header>
 
-    <title>Burnmsg - Self-desctructing, encrypted messages</title>
+				<!-- Nav -->
+                    <nav id="nav">
+                        <a href="{{ URL::to('/') }}" class="fa fa-home"><span>Home</span></a>
+                        <a href="#message" class="fa fa-envelope active"><span>Message</span></a>
+						<a href="#github" class="fa fa-github"><span>Fork Me</span></a>
+						<a href="#twitter" class="fa fa-twitter"><span>Twitter</span></a>
+					</nav>
 
-    <!-- Bootstrap core CSS -->
-    <link href="{{ asset('css/styles.css') }}" rel="stylesheet">
+				<!-- Main -->
+					<div id="main">
 
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-    <![endif]-->
-  </head>
+						<!-- Message -->
+                            <article id="message" class="panel">
+                                @yield('content')
+							</article>
 
-  <body>
+						<!-- Github -->
+                            <article id="github" class="panel">
+                                <header>
+									<h1>Fork Me on Github</h1>
+                                    <a href="https://www.github.com/ezynda3/burnmsg.git" target="_blank">
+                                        http://www.github.com/ezynda3/burnmsg.git
+                                    </a>
+                                </header>
+                            </article>
 
-    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-          <a class="navbar-brand" href="{{ route('messages.create') }}">Burnmsg</a>
-        </div>
-       </div>
-    </div>
-
-    <div class="container">
-        @yield('content')
-    </div><!-- /.container -->
+						<!-- Twitter -->
+                            <article id="twitter" class="panel">
+                                <header>
+									<h1>Folow Me on Twitter</h1>
+                                    <a href="https://www.twitter.com/edzynda" target="_blank">
+                                        http://www.twitter.com/edzynda
+                                    </a>
+                                </header>
+                            </article>
 
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="{{ asset('js/app.js') }}"></script>
-  </body>
+					</div>
+
+				<!-- Footer -->
+					<div id="footer">
+						<ul class="links">
+							<li>&copy; Jane Doe</li>
+							<li>Images : <a href="http://fotogrph.com/">fotogrph</a></li>
+							<li>Design : <a href="http://html5up.net/">HTML5 UP</a></li>
+						</ul>
+					</div>
+
+			</div>
+
+	</body>
 </html>

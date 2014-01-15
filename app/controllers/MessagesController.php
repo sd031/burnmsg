@@ -86,7 +86,7 @@ class MessagesController extends BaseController {
             $msg->save();
         }
 
-        return View::make('messages.show', ['body' => $body]);
+        return View::make('messages.show', ['body' => $body, 'url' => $url]);
 	}
 
 }

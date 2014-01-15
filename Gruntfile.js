@@ -9,11 +9,12 @@ module.exports = function(grunt) {
             },            
             javascript: {
                 src: [
-                    './app/assets/js/app.js',
                     './bower_components/jquery/jquery.min.js',
-                    './bower_components/bootstrap/bootstrap.min.js'
+                    './app/assets/js/skel.min.js',
+                    './app/assets/js/init.js',
+                    './app/assets/js/app.js'
                 ],
-                dest: './public/js/app.js'
+                dest: './public/assets/js/app.js'
             }
         },
         less: {
@@ -23,7 +24,8 @@ module.exports = function(grunt) {
                 },
                 files: {
                 //compile main stylesheet
-                './public/css/styles.css' : './app/assets/less/styles.less'
+                './public/assets/css/style.css' : './app/assets/less/style.less',
+                './public/assets/css/style-desktop.css' : './app/assets/less/style-desktop.less'
                 }
             }
         },
@@ -33,8 +35,15 @@ module.exports = function(grunt) {
             },
             dist: {
                 files: {
-                    './public/js/app.js' : './public/js/app.js'
+                    './public/assets/js/app.js' : './public/assets/js/app.js'
                 }
+            }
+        },
+        copy: {
+            fontawesome: {
+                files: [
+                    { expand: true, cwd: './bower_components/font-awesome/fonts/', src: ['**'], dest: './public/assets/fonts/' }
+                ]
             }
         },
         phpunit: {
@@ -73,9 +82,10 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-phpunit');
 
     //Define the deault task
     grunt.registerTask('default', ['watch']);
-    grunt.registerTask('build', ['concat', 'uglify', 'less']);
+    grunt.registerTask('build', ['concat', 'uglify', 'less', 'copy']);
 };
