@@ -30,7 +30,7 @@
                     <nav id="nav">
                         <a href="{{ URL::to('/') }}" class="fa fa-home"><span>Home</span></a>
                         <a href="#message" class="fa fa-envelope active"><span>Message</span></a>
-						<a href="#github" class="fa fa-github"><span>Fork Me</span></a>
+						<a href="#github" class="fa fa-github"><span>Github</span></a>
 						<a href="#twitter" class="fa fa-twitter"><span>Twitter</span></a>
 					</nav>
 
@@ -55,7 +55,7 @@
 						<!-- Twitter -->
                             <article id="twitter" class="panel">
                                 <header>
-									<h1>Folow Me on Twitter</h1>
+									<h1>Follow Me on Twitter</h1>
                                     <a href="https://www.twitter.com/edzynda" target="_blank">
                                         http://www.twitter.com/edzynda
                                     </a>
@@ -68,8 +68,8 @@
 				<!-- Footer -->
 					<div id="footer">
 						<ul class="links">
-							<li>&copy; Jane Doe</li>
-							<li>Images : <a href="http://fotogrph.com/">fotogrph</a></li>
+							<li>&copy; Burnmsg</li>
+							<li>Code : <a href="http://edzynda.com/">Ed Zynda</a></li>
 							<li>Design : <a href="http://html5up.net/">HTML5 UP</a></li>
 						</ul>
 					</div>
