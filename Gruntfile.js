@@ -25,7 +25,8 @@ module.exports = function(grunt) {
                 files: {
                 //compile main stylesheet
                 './public/assets/css/style.css' : './app/assets/less/style.less',
-                './public/assets/css/style-desktop.css' : './app/assets/less/style-desktop.less'
+                './public/assets/css/style-desktop.css' : './app/assets/less/style-desktop.less',
+                './public/assets/css/style-noscript.css' : './app/assets/less/style-noscript.less'
                 }
             }
         },
