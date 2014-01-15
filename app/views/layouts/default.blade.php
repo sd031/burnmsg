@@ -1,10 +1,16 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Burnmsg - A self-destructing, encryted message app</title>
+		<title>Burnmsg - A self-destructing, encrypted message app</title>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<meta name="description" content="" />
-		<meta name="keywords" content="" />
+		<meta name="description" content="A self-destructing, encrypted message app" />
+        <meta name="keywords" content="" />
+
+        <meta property="og:title" content="Burnmsg - A self-destructing, encrypted message app">
+        <meta property="og:type" content="website">
+        <meta property="og:image" content="{{ asset('images/screenshot.png') }}">
+        <meta property="og:site_name" content="Burnmsg.com">
+
 		<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400" rel="stylesheet" />
         <script>
             @if (Request::segment(1))
