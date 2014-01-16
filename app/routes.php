@@ -10,7 +10,6 @@
 | and give it the Closure to execute when that URI is requested.
 |
 */
-
 Route::get('/', ['as' => 'messages.create', 'uses' => 'MessagesController@create']);
 Route::post('/', ['as' => 'messages.store', 'uses' => 'MessagesController@store']);
 Route::get('/{url}/{key}', ['as' => 'messages.show', 'uses' => 'MessagesController@show']);
