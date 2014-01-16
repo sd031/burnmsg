@@ -32,7 +32,7 @@ class Message extends Eloquent {
 			}
 
             if( static::whereUrl($converted)->first() ) {
-				static::get_unique_url();
+				$converted = static::get_unique_url();
 			}
 
             return $converted;
