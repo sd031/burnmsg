@@ -6,7 +6,7 @@
 		<meta name="description" content="A self-destructing, encrypted message app" />
         <meta name="keywords" content="" />
 
-        <meta property="og:url" content="http://burnmsg.com">
+        <meta property="og:url" content="https://burnmsg.com">
         <meta property="og:description" content="A self-destructing, encrypted message app">
         <meta property="og:title" content="Burnmsg - A self-destructing, encrypted message app">
         <meta property="og:type" content="website">
