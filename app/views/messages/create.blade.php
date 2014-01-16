@@ -1,7 +1,7 @@
 @extends('layouts.default')
 
 @section('content')
-{{ Form::open(['method' => 'post', 'url' => '/', 'class' => 'form']) }}
+{{ Form::open(['method' => 'post', 'url' => secure_url('/'), 'class' => 'form']) }}
 <div class="form-group">
     @if($errors->first())
         <div class="alert alert-danger">
