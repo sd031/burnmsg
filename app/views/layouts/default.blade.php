@@ -69,8 +69,6 @@
                                 </a>
                                 </header>
                             </article>
-
-
 					</div>
 
 				<!-- Footer -->
