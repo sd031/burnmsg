@@ -21,9 +21,9 @@
                 var prefix = 'assets/css/style';
             @endif
         </script>
-        <script src="{{ asset('assets/js/app.js') }}"></script>
+        <script src="{{ secure_asset('assets/js/app.js') }}"></script>
         <noscript>
-            <link rel="stylesheet" href="{{ asset('assets/css/style-noscript.css') }}" />
+            <link rel="stylesheet" href="{{ secure_asset('assets/css/style-noscript.css') }}" />
         </noscript>
         <!--[if lte IE 8]><script src="js/html5shiv.js"></script><link rel="stylesheet" href="css/ie8.css" /><![endif]-->
 	</head>
