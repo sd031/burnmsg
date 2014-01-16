@@ -11,6 +11,6 @@
 |
 */
 
-Route::get('/', ['https' => true, 'as' => 'messages.create', 'uses' => 'MessagesController@create']);
-Route::post('/', ['https' => true, 'as' => 'messages.store', 'uses' => 'MessagesController@store']);
-Route::get('/{url}/{key}', ['https' => true, 'as' => 'messages.show', 'uses' => 'MessagesController@show']);
+Route::get('/', ['as' => 'messages.create', 'uses' => 'MessagesController@create']);
+Route::post('/', ['as' => 'messages.store', 'uses' => 'MessagesController@store']);
+Route::get('/{url}/{key}', ['as' => 'messages.show', 'uses' => 'MessagesController@show']);
